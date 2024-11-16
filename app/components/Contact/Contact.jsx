@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { useState } from 'react';
 
 export default function AboutUs() {
@@ -11,8 +11,18 @@ export default function AboutUs() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add form submission logic here
-    console.log(form);
+    const { name, email, message } = form;
+
+    const subject = "Interior Design Enquiry";
+    const body = `Hello,\n\nYou have received an enquiry from:\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}\n\nRegards,\n${name}`;
+
+    const mailtoLink = `mailto:sanketsjagdale999@gmail.com?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoLink;
+
+    // Reset the form state after submission
+  setForm({ name: '', email: '', message: '' });
   };
 
   return (
@@ -46,7 +56,7 @@ export default function AboutUs() {
                 name="name"
                 value={form.name}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500"
+                className="text-black w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500"
                 placeholder="Your Name"
                 required
               />
@@ -58,7 +68,7 @@ export default function AboutUs() {
                 name="email"
                 value={form.email}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500"
+                className="text-black w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500"
                 placeholder="Your Email"
                 required
               />
@@ -69,7 +79,7 @@ export default function AboutUs() {
                 name="message"
                 value={form.message}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500"
+                className="text-black w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500"
                 placeholder="Your Message"
                 rows="4"
                 required

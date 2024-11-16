@@ -5,6 +5,7 @@ import {
   FaSearch,
   FaDraftingCompass,
   FaTools,
+  FaHandHolding
 } from "react-icons/fa";
 
 export default function Services() {
@@ -22,8 +23,8 @@ export default function Services() {
         <div className="grid gap-8 md:grid-cols-3 grid-cols-1">
           <div className="p-8 bg-gray-100 rounded-lg shadow-md hover:shadow-lg transition">
             <FaPaintBrush className="text-5xl text-gray-600 mb-4 mx-auto" />
-            <h3 className="text-2xl font-semibold mb-2">Interior Design</h3>
-            <p className="text-gray-600">
+            <h3 className="text-2xl font-semibold mb-2 text-center text-yellow-500">Interior Design</h3>
+            <p className="text-gray-600 text-center">
               Transform your spaces with innovative and stylish interior design
               solutions tailored to your tastes.
             </p>
@@ -31,8 +32,8 @@ export default function Services() {
 
           <div className="p-8 bg-gray-100 rounded-lg shadow-md hover:shadow-lg transition">
             <FaCouch className="text-5xl text-gray-600 mb-4 mx-auto" />
-            <h3 className="text-2xl font-semibold mb-2">Furniture Selection</h3>
-            <p className="text-gray-600">
+            <h3 className="text-2xl font-semibold mb-2 text-center text-yellow-500">Furniture Selection</h3>
+            <p className="text-gray-600 text-center">
               We provide expert furniture selection to create comfortable and
               aesthetically pleasing spaces.
             </p>
@@ -40,8 +41,8 @@ export default function Services() {
 
           <div className="p-8 bg-gray-100 rounded-lg shadow-md hover:shadow-lg transition">
             <FaRulerCombined className="text-5xl text-gray-600 mb-4 mx-auto" />
-            <h3 className="text-2xl font-semibold mb-2">Space Planning</h3>
-            <p className="text-gray-600">
+            <h3 className="text-2xl font-semibold mb-2 text-center text-yellow-500">Space Planning</h3>
+            <p className="text-gray-600 text-center">
               Optimize your spaces with professional space planning for
               functionality and flow.
             </p>
@@ -51,30 +52,34 @@ export default function Services() {
         {/* How We Work Section */}
         <div className="text-center mt-20">
           <h2 className="text-4xl font-bold mb-12 text-gray-800">
-            How We Work
+            Our Process
           </h2>
         </div>
 
         <div className="relative max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center md:justify-between relative">
+          <div className="flex flex-col md:flex-row items-center md:justify-between relative md:gap-[3rem]">
             {[
               {
                 icon: <FaSearch className="text-4xl text-yellow-500" />,
-                title: "Discovery Phase",
+                title: "Briefing",
                 description:
-                  "We work with you to understand your needs, preferences, and vision.",
+                  "We begin with an exhaustive questionnaire to fully understand the client's needs and expectations.",
               },
               {
                 icon: <FaDraftingCompass className="text-4xl text-yellow-500" />,
-                title: "Design Development",
+                title: "Design",
                 description:
-                  "Our team creates a detailed plan, including visuals and layouts.",
+                  "Translatin the brief into the blueprint of what is to come. From moodboards to models, we design every last detail",
               },
               {
                 icon: <FaTools className="text-4xl text-yellow-500" />,
-                title: "Execution & Delivery",
+                title: "Execution",
                 description:
-                  "We turn the designs into reality, ensuring high-quality execution.",
+                  "Bringing designs to life with end-to-end execution, from structural planning to decor.",
+              }, {
+                icon: <FaHandHolding className="text-4xl text-yellow-500" />,
+                title: "Handover",
+                description:"The most anticipated moment, where we hand our clients the keys to their new space, all ready to move in",
               },
             ].map((step, index) => (
               <div
@@ -82,7 +87,7 @@ export default function Services() {
                 className="relative flex flex-col items-center text-center w-full md:w-1/3 mb-8 md:mb-0"
               >
                 {/* Icon */}
-                <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center shadow-md">
+                <div className="w-16 h-16  rounded-full flex items-center justify-center shadow-md">
                   {step.icon}
                 </div>
 
@@ -94,7 +99,7 @@ export default function Services() {
                 )} */}
 
                 {/* Title */}
-                <h3 className="text-lg font-bold mt-4 text-yellow-500">{step.title}</h3>
+                <h3 className="text-lg font-bold mt-4 text-yellow-500 uppercase">{step.title}</h3>
 
                 {/* Description */}
                 <p className="text-sm text-gray-600 mt-2">{step.description}</p>

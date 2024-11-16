@@ -20,7 +20,7 @@ export default function App() {
         <About />
         <Services />
         <Projects />
-        <Team />
+        {/* <Team /> */}
         <Contact />
         <Footer/>
       </main>
