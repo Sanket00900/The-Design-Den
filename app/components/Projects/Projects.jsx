@@ -3,24 +3,24 @@ import Image from 'next/image';
 const projectItems = [
   { src: '/images/projects/1.jpg', type: 'image' },
   { src: '/images/projects/2.mp4', type: 'video' },
-  { src: '/images/projects/3.jpg', type: 'image' },
+  { src: '/images/projects/3.JPG', type: 'image' },
   { src: '/images/projects/4.jpg', type: 'image' },
   { src: '/images/projects/5.mp4', type: 'video' },
-  { src: '/images/projects/6.jpg', type: 'image' },
-  { src: '/images/projects/7.jpg', type: 'image' },
-  { src: '/images/projects/8.jpg', type: 'image' },
-  { src: '/images/projects/9.jpg', type: 'image' },
-  { src: '/images/projects/10.jpg', type: 'image' },
+  { src: '/images/projects/6.JPG', type: 'image' },
+  { src: '/images/projects/7.JPG', type: 'image' },
+  { src: '/images/projects/8.JPG', type: 'image' },
+  { src: '/images/projects/9.JPG', type: 'image' },
+  { src: '/images/projects/10.JPG', type: 'image' },
   { src: '/images/projects/11.jpg', type: 'image' },
   { src: '/images/projects/12.jpg', type: 'image' },
-  { src: '/images/projects/13.jpg', type: 'image' },
+  { src: '/images/projects/13.JPG', type: 'image' },
   { src: '/images/projects/14.jpg', type: 'image' },
-  { src: '/images/projects/15.jpg', type: 'image' },
-  { src: '/images/projects/16.jpg', type: 'image' },
-  { src: '/images/projects/17.jpg', type: 'image' },
-  { src: '/images/projects/18.jpg', type: 'image' },
-  { src: '/images/projects/19.jpg', type: 'image' },
-  { src: '/images/projects/20.jpg', type: 'image' },
+  { src: '/images/projects/15.JPG', type: 'image' },
+  { src: '/images/projects/16.JPG', type: 'image' },
+  { src: '/images/projects/17.JPG', type: 'image' },
+  { src: '/images/projects/18.JPG', type: 'image' },
+  { src: '/images/projects/19.JPG', type: 'image' },
+  { src: '/images/projects/20.JPG', type: 'image' },
   { src: '/images/projects/21.jpg', type: 'image' },
   { src: '/images/projects/22.jpg', type: 'image' },
   { src: '/images/projects/23.jpg', type: 'image' },
@@ -42,7 +42,7 @@ export default function Projects() {
             >
               {item.type === 'image' ? (
                 <Image
-                  src={item.src.toLowerCase()}  // Convert to lowercase to handle case-insensitivity
+                  src={item.src}
                   alt={`Project ${index + 1}`}
                   layout="fill"
                   objectFit="cover"
@@ -50,9 +50,9 @@ export default function Projects() {
                 />
               ) : (
                 <video
-                  autoPlay
-                  loop
-                  muted
+                autoPlay
+                loop
+                muted
                   src={item.src}
                   className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
                 ></video>
