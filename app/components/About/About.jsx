@@ -1,17 +1,21 @@
 import Image from 'next/image';
 
 export default function About() {
-  const aboutUsText = `At The Deisng Den, we believe that every space tells a story — a narrative shaped by the people who inhabit it and the dreams they hold dear. Based in India, we specialize in creating bespoke interiors that blend functionality with artistry, crafting environments that are as beautiful as they are practical. With years of experience in the interior design industry, our team of passionate designers and craftsmen takes pride in bringing your vision to life. Whether it's a modern urban apartment, a serene workspace, or a luxurious villa, we tailor every detail to reflect your unique personality and lifestyle.`
-  return (
+  const aboutUsText = `The Design Den is a interior design company offering end-to-end services in the realm of luxury interiors. We pride ourselves on our unmatched aesthetic and attention to detail, which we bring in at every stage – from planning to handovers.
+We take on a select number of clients; we see ourselves as your partners right from the beginning and craft all our projects from scratch.
+We focus on quality, and excellent ‘design service’, as being the
+cornerstone of our practice.
+we  work with highly qualified and selective suppliers and contractors to ensure the best quality, fit and finish for all projects.` 
+   return (
     <section id="about" className="py-20 bg-gray-100">
       <div className="container mx-auto px-6 md:flex md:items-center md:space-x-8">
         {/* Left Image Section */}
         <div className="md:w-1/2 w-full mb-8 md:mb-0">
           <Image
-            src="/placeholder.jpg" // Replace with actual image path
+            src="/images/logo.jpg"
             alt="Interior Design"
             width={500}
-            height={700}
+            height={500}
             className="rounded-lg shadow-lg"
           />
         </div>

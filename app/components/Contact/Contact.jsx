@@ -1,8 +1,8 @@
-'use client';
-import { useState } from 'react';
+"use client";
+import { useState } from "react";
 
 export default function AboutUs() {
-  const [form, setForm] = useState({ name: '', email: '', message: '' });
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -16,41 +16,57 @@ export default function AboutUs() {
     const subject = "Interior Design Enquiry";
     const body = `Hello,\n\nYou have received an enquiry from:\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}\n\nRegards,\n${name}`;
 
-    const mailtoLink = `mailto:sanketsjagdale999@gmail.com?subject=${encodeURIComponent(
+    const mailtoLink = `mailto:designden2024@gmail.com?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(body)}`;
     window.location.href = mailtoLink;
 
     // Reset the form state after submission
-  setForm({ name: '', email: '', message: '' });
+    setForm({ name: "", email: "", message: "" });
   };
+
+  const officeLocationText1 = `1. Plot no 6, gharkul residence, omkar colony, rajiv nagar, nashik 422009`;
+  const officeLocationText2 = ` 2. Tathwade , wakad pune`;
 
   return (
     <section id="contact" className="py-20 bg-gray-100">
       <div className="container mx-auto px-6 flex flex-col md:flex-row gap-10">
         {/* Left Section: Contact Information */}
         <div className="flex-1 bg-white p-8 rounded-lg shadow-lg">
-          <h2 className="text-3xl font-bold mb-6 text-gray-800">Contact Information</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-800">
+            Contact Information
+          </h2>
           <p className="mb-4 text-gray-700">
-            <strong>Office Location:</strong> 123 Interior St, Design City, ST 56789
+            <strong>Office Location:</strong>
           </p>
           <p className="mb-4 text-gray-700">
-            <strong>Phone:</strong> +1 234 567 890
+            {officeLocationText1} <br />
+            {officeLocationText2}{" "}
           </p>
           <p className="mb-4 text-gray-700">
-            <strong>Email:</strong> contact@interiordesign.com
+            <strong>Phone:</strong> 7888041298 , 9607998659
           </p>
           <p className="mb-4 text-gray-700">
-            <strong>Working Hours:</strong> Mon-Fri, 9:00 AM - 6:00 PM
+            <strong>Email:</strong> designden2024@gmail.com
+          </p>
+          <p className="mb-4 text-gray-700">
+            <strong>Working Hours:</strong> Mon-Sat, 9:00 AM - 6:00 PM
           </p>
         </div>
 
         {/* Right Section: Contact Form */}
         <div className="flex-1 bg-white p-8 rounded-lg shadow-lg">
-          <h2 className="text-3xl font-bold mb-6 text-gray-800">Get in Touch</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-800">
+            Get in Touch
+          </h2>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">Name</label>
+              <label
+                htmlFor="name"
+                className="block text-gray-700 font-semibold mb-2"
+              >
+                Name
+              </label>
               <input
                 type="text"
                 name="name"
@@ -62,7 +78,12 @@ export default function AboutUs() {
               />
             </div>
             <div>
-              <label htmlFor="email" className="block text-gray-700 font-semibold mb-2">Email</label>
+              <label
+                htmlFor="email"
+                className="block text-gray-700 font-semibold mb-2"
+              >
+                Email
+              </label>
               <input
                 type="email"
                 name="email"
@@ -74,7 +95,12 @@ export default function AboutUs() {
               />
             </div>
             <div>
-              <label htmlFor="message" className="block text-gray-700 font-semibold mb-2">Message</label>
+              <label
+                htmlFor="message"
+                className="block text-gray-700 font-semibold mb-2"
+              >
+                Message
+              </label>
               <textarea
                 name="message"
                 value={form.message}

@@ -31,7 +31,7 @@ export default function Navbar() {
         <>
           {/* Backdrop Blur Overlay */}
           <div
-            className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm z-10"
+            className="fixed inset-0 bg-black bg-opacity-30 z-10"
             onClick={() => setIsOpen(false)}
           ></div>
 
