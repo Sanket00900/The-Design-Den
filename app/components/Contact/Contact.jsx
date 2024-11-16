@@ -26,7 +26,7 @@ export default function AboutUs() {
   };
 
   return (
-    <section id="about-us" className="py-20 bg-gray-100">
+    <section id="contact" className="py-20 bg-gray-100">
       <div className="container mx-auto px-6 flex flex-col md:flex-row gap-10">
         {/* Left Section: Contact Information */}
         <div className="flex-1 bg-white p-8 rounded-lg shadow-lg">
