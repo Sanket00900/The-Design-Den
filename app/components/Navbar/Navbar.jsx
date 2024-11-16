@@ -13,7 +13,7 @@ export default function Navbar() {
           <a href="#about" className="text-gray-700 hover:text-gray-900">About</a>
           <a href="#services" className="text-gray-700 hover:text-gray-900">Services</a>
           <a href="#projects" className="text-gray-700 hover:text-gray-900">Projects</a>
-          <a href="#team" className="text-gray-700 hover:text-gray-900">Team</a>
+          {/* <a href="#team" className="text-gray-700 hover:text-gray-900">Team</a> */}
           <a href="#contact" className="text-gray-700 hover:text-gray-900">Contact</a>
         </div>
         <button
@@ -41,7 +41,7 @@ export default function Navbar() {
             <a href="#about" className="block py-2 px-4 text-gray-700 hover:bg-gray-100">About</a>
             <a href="#services" className="block py-2 px-4 text-gray-700 hover:bg-gray-100">Services</a>
             <a href="#projects" className="block py-2 px-4 text-gray-700 hover:bg-gray-100">Projects</a>
-            <a href="#team" className="block py-2 px-4 text-gray-700 hover:bg-gray-100">Team</a>
+            {/* <a href="#team" className="block py-2 px-4 text-gray-700 hover:bg-gray-100">Team</a> */}
             <a href="#contact" className="block py-2 px-4 text-gray-700 hover:bg-gray-100">Contact</a>
           </div>
         </>
