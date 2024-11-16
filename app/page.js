@@ -1,5 +1,6 @@
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 import HomePage from "./components/HomePage/HomePage";
 import Navbar from "./components/Navbar/Navbar";
 import Projects from "./components/Projects/Projects";
@@ -21,6 +22,7 @@ export default function App() {
         <Projects />
         <Team />
         <Contact />
+        <Footer/>
       </main>
     </>
   );
