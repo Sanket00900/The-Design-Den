@@ -42,7 +42,7 @@ export default function Projects() {
             >
               {item.type === 'image' ? (
                 <Image
-                  src={item.src}
+                  src={item.src.toLowerCase()}  // Convert to lowercase to handle case-insensitivity
                   alt={`Project ${index + 1}`}
                   layout="fill"
                   objectFit="cover"
@@ -50,9 +50,9 @@ export default function Projects() {
                 />
               ) : (
                 <video
-                autoPlay
-                loop
-                muted
+                  autoPlay
+                  loop
+                  muted
                   src={item.src}
                   className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
                 ></video>
